@@ -6,9 +6,9 @@ MenuIcon.onclick=() =>{
     navbar.classList.toggle("active");
 };
 
+let sections = document.querySelectorAll("section");
+let navlinks = document.querySelectorAll("header nav a");
 
-let sections = document.querySelector("section")
-let navlinks = document.querySelector("header nav a")
 
 window.onscroll = () =>{
     sections.forEach(sec => {
@@ -45,4 +45,11 @@ ScrollReveal().reveal('.home-img , .skills-container , .project-box , .contact f
 ScrollReveal().reveal('.home-content h1', {  origin:'left'});
 ScrollReveal().reveal('.home-content, .about-content , .education-container ', {  origin:'right'});
 
-
+function toggleDropdown(header) {
+  const skillsBox = header.parentElement;
+  const list = skillsBox.querySelector('.skills-list');
+  const icon = header.querySelector('.dropdown-icon');
+  
+  list.style.display = list.style.display === 'grid' ? 'none' : 'grid';
+  icon.style.transform = list.style.display === 'grid' ? 'rotate(180deg)' : 'rotate(0)';
+}
