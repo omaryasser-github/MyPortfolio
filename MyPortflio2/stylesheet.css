@@ -56,15 +56,35 @@ section {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--text-color);
     font-weight: 700;
     /* prevents it from being selectable */
-    cursor: default;
+    cursor: pointer;
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.lang {
+    position:relative;
+    background: transparent;
+    width: 60px;
+    margin-left: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+
+.lang option{
+   
+  color:black; 
 }
 
 .navbar a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 700;
@@ -122,7 +142,8 @@ span {
     width: 35rem;
     animation: floatImage 4s ease-in-out infinite;
     border-radius: 50%;
-    background: rgba(89, 178, 244, 0.1); /* نفس الـ main-color ولكن شفاف */
+    background: rgba(89, 178, 244, 0.1);
+    /* نفس الـ main-color ولكن شفاف */
     box-shadow: 0 0 30px rgba(89, 178, 244, 0.5);
 
 
@@ -209,6 +230,7 @@ span {
 .education-container {
     padding: 1rem;
     background: var(--snd-bf-color);
+    margin-top:100px;
     border-radius: 2rem;
     border: rgb(53, 53, 53) 2px solid;
     text-align: center;
@@ -282,7 +304,7 @@ span {
 }
 
 .skills-list li i {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 #projects {
@@ -412,16 +434,16 @@ span {
     cursor: pointer;
 }
 
-  .error {
+.error {
     border: 2px solid red;
-  }
+}
 
-  .error-message {
+.error-message {
     color: red;
     font-size: 0.8rem;
     margin-top: 2px;
     display: block;
-  }
+}
 
 #footer {
     display: flex;

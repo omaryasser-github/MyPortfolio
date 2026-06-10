@@ -1,6 +1,9 @@
 let MenuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
+console.log("Hello from omar yasser %cI hope u like my portfolio" , "color:red ; font-size:15px");
+
+
 MenuIcon.onclick = () => {
   MenuIcon.classList.toggle("fa-times");
   navbar.classList.toggle("active");
@@ -8,7 +11,7 @@ MenuIcon.onclick = () => {
 
 let sections = document.querySelectorAll("section");
 let navlinks = document.querySelectorAll("header nav a");
-
+let currentActiveLink = null;
 
 window.onscroll = () => {
   sections.forEach(sec => {
@@ -17,12 +20,14 @@ window.onscroll = () => {
     let height = sec.offsetHeight;
     let id = sec.getAttribute('id');
 
-    if (top >= offset && top < offset + height) {
-      navlinks.forEach(links => {
-        links.classList.remove('active');
-        document.querySelector(`header nav a[href*="${id}"]`).classList.add('active');
-      })
+   if (top >= offset && top < offset + height) {
+    if (currentActiveLink) {
+      currentActiveLink.classList.remove('active'); // نشيل التفعيل من القديم
     }
+
+    currentActiveLink = document.querySelector(`header nav a[href*="${id}"]`);
+    if (currentActiveLink) currentActiveLink.classList.add('active'); // نفعّل الجديد
+  }
   });
   /* ========================= sticky navbar ======================== */
   let header = document.querySelector("header")
@@ -36,12 +41,11 @@ window.onscroll = () => {
 /*============================== scroll  ================ */
 ScrollReveal({
   distance: '80px',
-  duration: 2000,
-  dely: 200,
+  duration: 1500,
 });
 
-ScrollReveal().reveal('.home-content , heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img , .skills-container , .project-box , .contact form', { origin: 'buttom' });
+ScrollReveal().reveal('.home-content , .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img , .skills-container , .project-box , .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1', { origin: 'left' });
 ScrollReveal().reveal('.home-content, .about-content , .education-container ', { origin: 'right' });
 
@@ -115,8 +119,7 @@ form.addEventListener("submit", function (e) {
 
   if (isValid) {
     alert("Form submitted successfully!");
-    // لو حابب تبعته فعليًا:
-    // form.submit();
+      form.reset();
   }
 });
 
