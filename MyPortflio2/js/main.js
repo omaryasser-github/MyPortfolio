@@ -224,6 +224,5 @@ if (window.performance && window.performance.timing) {
   window.addEventListener('load', () => {
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-    console.log('%cPage Load Time: ' + pageLoadTime + 'ms', 'color: #38bdf8;');
   });
 }
