@@ -36,7 +36,7 @@ The project demonstrates professional development practices including:
 
 ✨ **Core Features:**
 - **Responsive Design** – Optimized for desktop, tablet, and mobile devices
-- **Multi-Language Support** – Seamlessly toggle between English and Arabic (RTL support)
+- *Bi-Language Support** – Seamlessly toggle between English and Arabic (RTL support)
 - **Smooth Animations** – Scroll reveal effects using ScrollReveal library
 - **Interactive Navigation** – Sticky header with active section highlighting
 - **Professional Sections:**
