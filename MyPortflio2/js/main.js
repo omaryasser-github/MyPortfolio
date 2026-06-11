@@ -145,7 +145,7 @@ const resumeBtn = document.getElementById('resumeBtn');
 
 const downloadCV = () => {
   // Update with actual CV file path
-  window.open('../assets/files/Omar-Eldeeb.pdf' ,'_blank');
+  window.open('./assets/files/Omar-Eldeeb.pdf' ,'_blank');
 };
 
 cvDownloadBtn?.addEventListener('click', downloadCV);
@@ -186,13 +186,13 @@ if (typeof ScrollReveal !== 'undefined') {
 let lastKeyTime = 0;
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Tab') {
-    lastKeyTime = Date.now();
+    lastKeyTime = performance.now();
     document.body.classList.add('keyboard-nav');
   }
 });
 
 document.addEventListener('mousedown', () => {
-  if (Date.now() - lastKeyTime > 100) {
+  if (performance.now() - lastKeyTime > 100) {
     document.body.classList.remove('keyboard-nav');
   }
 });
