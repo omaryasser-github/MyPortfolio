@@ -89,7 +89,7 @@ window.addEventListener('scroll', () => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
     
-    if (pageYOffset >= sectionTop - 200) {
+    if (window.scrollY >= sectionTop - 200) {
       current = section.getAttribute('id');
     }
   });
@@ -145,7 +145,7 @@ const resumeBtn = document.getElementById('resumeBtn');
 
 const downloadCV = () => {
   // Update with actual CV file path
-  window.open('./Omaryasser_CV_2025.pdf', '_blank');
+  window.open('../assets/files/Omar-Eldeeb.pdf' ,'_blank');
 };
 
 cvDownloadBtn?.addEventListener('click', downloadCV);
@@ -203,21 +203,21 @@ document.addEventListener('mousedown', () => {
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (prefersReducedMotion) {
-  document.documentElement.style.scrollBehavior = 'auto';
-  document.querySelectorAll('*').forEach(el => {
-    el.style.animationDuration = '0.01ms !important';
-    el.style.transitionDuration = '0.01ms !important';
-  });
-}
+// if (prefersReducedMotion) {
+//   document.documentElement.style.scrollBehavior = 'auto';
+//   document.querySelectorAll('*').forEach(el => {
+//     el.style.animationDuration = '0.01ms !important';
+//     el.style.transitionDuration = '0.01ms !important';
+//   });
+// }
 
 /* =============================================
    10. UTILITY FUNCTIONS
    ============================================ */
 
-// Log version info
-console.log('%c🚀 Portfolio v2.0', 'font-size: 16px; font-weight: bold; color: #22d3c5;');
-console.log('%cBuilt with precision. Deployed with confidence.', 'font-size: 12px; color: #94a3b8;');
+// // Log version info
+// console.log('%c🚀 Portfolio v2.0', 'font-size: 16px; font-weight: bold; color: #22d3c5;');
+// console.log('%cBuilt with precision. Deployed with confidence.', 'font-size: 12px; color: #94a3b8;');
 
 // Performance monitoring
 if (window.performance && window.performance.timing) {
