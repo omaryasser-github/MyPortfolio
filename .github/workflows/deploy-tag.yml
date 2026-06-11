@@ -8,8 +8,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # CRITICAL FIX: This ensures the EXACT commit tagged is checked out,
+          # not the latest commit on the branch.
+          ref: ${{ github.ref }} 
+          fetch-depth: 0 # Fetches all history so Vercel can see the tag context
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       
