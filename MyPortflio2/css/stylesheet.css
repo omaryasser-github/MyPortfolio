@@ -32,6 +32,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 img {
@@ -140,6 +141,41 @@ button {
   --z-fixed: 30;
   --z-dropdown: 40;
   --z-modal: 50;
+}
+
+/* =============================================
+   LIGHT MODE THEME VARIABLES
+   ============================================ */
+
+[data-theme="light"] {
+  /* -------- BACKGROUND COLORS -------- */
+  --bg-main: #f8f9ff;
+  --bg-header: #ffffff;
+  --bg-card: #eff4ff;
+  --bg-card-soft: #e5eeff;
+  --bg-overlay: rgba(248, 249, 255, 0.9);
+
+  /* -------- TEXT COLORS -------- */
+  --text-main: #0b1c30;
+  --text-muted: #45464d;
+  --text-soft: #76777d;
+
+  /* -------- BRAND COLORS -------- */
+  --accent: #006c49;
+  --accent-dark: #004d36;
+  --tertiary: #000000;
+  --success: #10b981;
+  --error: #ba1a1a;
+
+  /* -------- BORDERS & OUTLINES -------- */
+  --border: #d3e4fe;
+  --border-soft: rgba(211, 228, 254, 0.5);
+  --outline: #76777d4d;
+
+  /* -------- SHADOWS (Light Mode) -------- */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.1);
 }
 
 /* =============================================
@@ -343,6 +379,33 @@ code {
   color: var(--accent);
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: var(--fs-lg);
+}
+
+.theme-toggle:hover {
+  background: var(--bg-card);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(20deg);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
 /* =============================================
    PHASE 6: HEADER & NAVIGATION
    ============================================ */
@@ -352,7 +415,7 @@ code {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(11, 17, 20, 0.95);
+  background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
   padding: var(--space-lg) 0;
@@ -360,9 +423,17 @@ code {
   transition: var(--transition);
 }
 
+[data-theme="light"] .site-header {
+  background: rgba(255, 255, 255, 0.98);
+}
+
 .site-header.scrolled {
-  background: rgba(11, 17, 20, 0.98);
+  background: rgba(15, 23, 42, 0.98);
   box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .site-header.scrolled {
+  background: rgba(255, 255, 255, 0.99);
 }
 
 .navbar-wrapper {

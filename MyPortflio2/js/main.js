@@ -28,14 +28,53 @@ navLinks.forEach(link => {
 document.addEventListener('click', (e) => {
   const header = document.querySelector('.site-header');
   const languageToggle = document.getElementById('languageToggle');
+  const themeToggle = document.getElementById('themeToggle');
   
-  // Don't close menu if clicking on language toggle or header elements
-  if (languageToggle?.contains(e.target)) return;
+  // Don't close menu if clicking on language/theme toggle or header elements
+  if (languageToggle?.contains(e.target) || themeToggle?.contains(e.target)) return;
   if (!header?.contains(e.target)) {
     navbar?.classList.remove('active');
     menuToggle?.classList.remove('active');
   }
 });
+
+/* =============================================
+   1.5. THEME TOGGLE (LIGHT/DARK MODE)
+   ============================================ */
+
+const themeToggle = document.getElementById('themeToggle');
+const htmlElement = document.documentElement;
+
+// Initialize theme on page load
+const initTheme = () => {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  setTheme(savedTheme);
+};
+
+// Set theme function
+const setTheme = (theme) => {
+  if (theme === 'light') {
+    htmlElement.setAttribute('data-theme', 'light');
+    themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+    localStorage.setItem('theme', 'light');
+  } else {
+    htmlElement.removeAttribute('data-theme');
+    themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    themeToggle.setAttribute('aria-label', 'Switch to light mode');
+    localStorage.setItem('theme', 'dark');
+  }
+};
+
+// Toggle theme on button click
+themeToggle?.addEventListener('click', () => {
+  const currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+});
+
+// Initialize theme on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', initTheme);
 
 /* =============================================
    2. ACTIVE NAV LINK ON SCROLL
@@ -188,79 +227,3 @@ if (window.performance && window.performance.timing) {
     console.log('%cPage Load Time: ' + pageLoadTime + 'ms', 'color: #38bdf8;');
   });
 }
-
-
-
-/* ===================== Dropdwonlist for Skills ===================== */
-function toggleDropdown(header) {
-  const skillsBox = header.parentElement;
-  const list = skillsBox.querySelector('.skills-list');
-  const icon = header.querySelector('.dropdown-icon');
-
-  list.style.display = list.style.display === 'grid' ? 'none' : 'grid';
-  icon.style.transform = list.style.display === 'grid' ? 'rotate(180deg)' : 'rotate(0)';
-}
-
-
-/*===================== Contact-us action validation ==============  */
-
-const mobileInput = document.getElementById("mobile");
-
-mobileInput.addEventListener("input", function () {
-  // امسح أي حروف مش أرقام
-  let onlyNums = this.value.replace(/[^0-9]/g, '');
-
-  // اقص القيمة عند 11 رقم بس
-  if (onlyNums.length > 11) {
-    onlyNums = onlyNums.slice(0, 11);
-  }
-
-  // رجّع النتيجة داخل الـ input
-  this.value = onlyNums;
-});
-const form = document.getElementById("contact");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // يمنع الإرسال مؤقتًا لو في أخطاء
-
-  let isValid = true;
-
-  // إعداد الـ inputs وقواعد التحقق
-  const fields = [
-    {
-      el: document.getElementById("fullName"),
-      validate: (v) => v.trim().length >= 4,
-      message: "Full name must be at least 4 characters.",
-    },
-    {
-      el: document.getElementById("email"),
-      validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
-      message: "Enter a valid email address.",
-    },
-    {
-      el: document.getElementById("mobile"),
-      validate: (v) => /^[0-9]{11}$/.test(v.trim()),
-      message: "Mobile number must be exactly 11 digits.",
-    },
-  ];
-
-  fields.forEach(({ el, validate, message }) => {
-    const value = el.value;
-    const errorEl = el.nextElementSibling;
-
-    if (!validate(value)) {
-      el.classList.add("error");
-      errorEl.textContent = message;
-      isValid = false;
-    } else {
-      el.classList.remove("error");
-      errorEl.textContent = "";
-    }
-  });
-
-  if (isValid) {
-    alert("Form submitted successfully!");
-      form.reset();
-  }
-});
-

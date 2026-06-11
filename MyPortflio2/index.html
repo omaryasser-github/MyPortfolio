@@ -1,22 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Omar Eldeeb - Backend-Focused Full-Stack Developer building secure APIs, AI-integrated systems, and scalable applications." />
+    <meta
+      name="description"
+      content="Omar Eldeeb - Backend-Focused Full-Stack Developer building secure APIs, AI-integrated systems, and scalable applications."
+    />
     <meta name="theme-color" content="#0f172a" />
-    <meta name="keywords" content="Backend Developer, Full-Stack, APIs, Node.js, React, AI Integration" />
+    <meta
+      name="keywords"
+      content="Backend Developer, Full-Stack, APIs, Node.js, React, AI Integration"
+    />
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Omar Eldeeb | Backend-Focused Full-Stack Developer" />
-    <meta property="og:description" content="Portfolio showcasing backend systems, secure APIs, AI integrations, and full-stack applications." />
+    <meta
+      property="og:title"
+      content="Omar Eldeeb | Backend-Focused Full-Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio showcasing backend systems, secure APIs, AI integrations, and full-stack applications."
+    />
     <meta property="og:type" content="website" />
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/stylesheet.css" />
@@ -34,7 +55,11 @@
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation menu"
+        >
           <i class="fa-solid fa-bars"></i>
         </button>
 
@@ -43,98 +68,155 @@
           <a href="#about" class="nav-link" data-i18n="navAbout">About</a>
           <a href="#focus" class="nav-link" data-i18n="navFocus">Focus</a>
           <a href="#skills" class="nav-link" data-i18n="navSkills">Skills</a>
-          <a href="#projects" class="nav-link" data-i18n="navProjects">Projects</a>
+          <a href="#projects" class="nav-link" data-i18n="navProjects"
+            >Projects</a
+          >
           <a href="#contact" class="nav-link" data-i18n="navContact">Contact</a>
         </nav>
 
         <!-- Theme & Language Toggles -->
         <div class="header-actions">
-          <button class="btn btn-ghost" id="languageToggle" aria-label="Toggle language (AR/EN)">AR</button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme (Light/Dark)"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button
+            class="btn btn-ghost"
+            id="languageToggle"
+            aria-label="Toggle language (AR/EN)"
+          >
+            AR
+          </button>
         </div>
       </div>
     </header>
 
     <!-- Main Content -->
     <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <p class="hero-greeting" data-i18n="heroGreeting">
+                Hi, my name is
+              </p>
+              <h1 class="hero-title">Omar Eldeeb.</h1>
+              <h2 class="hero-subtitle" data-i18n="heroSubtitle">
+                Backend-Focused Full-Stack Developer.
+              </h2>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <p class="hero-greeting" data-i18n="heroGreeting">Hi, my name is</p>
-            <h1 class="hero-title">Omar Eldeeb.</h1>
-            <h2 class="hero-subtitle" data-i18n="heroSubtitle">Backend-Focused Full-Stack Developer.</h2>
+              <!-- Core Expertise Badges -->
+              <div class="expertise-badges">
+                <span class="badge">Node.js</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">Docker</span>
+              </div>
 
-            <!-- Core Expertise Badges -->
-            <div class="expertise-badges">
-              <span class="badge">Node.js</span>
-              <span class="badge">TypeScript</span>
-              <span class="badge">PostgreSQL</span>
-              <span class="badge">Docker</span>
+              <!-- Hero Description -->
+              <p class="hero-description" data-i18n="heroDesc">
+                Building secure APIs, AI-integrated systems, and scalable
+                applications. Specializing in backend architecture and bridging
+                the gap between complex data logic and seamless user
+                experiences.
+              </p>
+
+              <!-- Hero Actions -->
+              <div class="hero-actions">
+                <a
+                  href="#projects"
+                  class="btn btn-primary"
+                  data-i18n="btnViewProjects"
+                  >View Projects</a
+                >
+                <button
+                  class="btn btn-outline"
+                  id="cvDownload"
+                  data-i18n="btnDownloadCV"
+                >
+                  Download CV
+                </button>
+              </div>
+
+              <!-- Social Links -->
+              <div class="social-links">
+                <a
+                  href="https://github.com/omaryasser-github"
+                  title="GitHub"
+                  aria-label="Visit GitHub"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/omar-yasser-4098282a3"
+                  title="LinkedIn"
+                  aria-label="Visit LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                  href="mailto:anaesthesiayassermadi717@gmail.com"
+                  title="Email"
+                  aria-label="Send email"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
             </div>
 
-            <!-- Hero Description -->
-            <p class="hero-description" data-i18n="heroDesc">
-              Building secure APIs, AI-integrated systems, and scalable applications.
-              Specializing in backend architecture and bridging the gap between complex data logic and seamless user experiences.
-            </p>
-
-            <!-- Hero Actions -->
-            <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary" data-i18n="btnViewProjects">View Projects</a>
-              <button class="btn btn-outline" id="cvDownload" data-i18n="btnDownloadCV">Download CV</button>
+            <!-- Hero Image -->
+            <div class="hero-image">
+              <img
+                src="../assets/images/my-ai-profile-update.png"
+                alt="Omar Eldeeb - Backend Developer"
+              />
             </div>
-
-            <!-- Social Links -->
-            <div class="social-links">
-              <a href="https://github.com/omaryasser-github" title="GitHub" aria-label="Visit GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/omar-yasser-4098282a3" title="LinkedIn" aria-label="Visit LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="mailto:anaesthesiayassermadi717@gmail.com" title="Email" aria-label="Send email">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Hero Image -->
-          <div class="hero-image">
-            <img src="../assets/images/my-ai-profile-update.png" alt="Omar Eldeeb - Backend Developer" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-      <div class="container">
-        <div class="section-header">
-          <span data-i18n="aboutTitle">About</span>
-          <h2 data-i18n="aboutTitle">About Me</h2>
-        </div>
-
-        <div class="about-grid">
-          <!-- Left Column: Text Content -->
-          <div class="about-content">
-            <p data-i18n="aboutDesc1">
-              I'm a highly motivated software engineering student with a strong foundation in backend development and system architecture. My approach to problem-solving emphasizes technical rigor and maintainable code. I thrive in environments where data modeling, performance optimization, and architectural clarity are valued.
-            </p>
-            <p data-i18n="aboutDesc2">
-              Currently pursuing my B.Sc. in Software Engineering, I approach problem-solving with a technical rigor that ensures scalable and maintainable code. I thrive in environments where data modeling, performance optimization, and architectural clarity are valued.
-            </p>
-            <p>
-              I'm actively seeking backend or full-stack internship opportunities where I can contribute to complex engineering challenges while continuously expanding my expertise in cloud-native technologies and backend ecosystems.
-            </p>
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="section-header">
+            <span data-i18n="aboutTitle">About</span>
+            <h2 data-i18n="aboutTitle">About Me</h2>
           </div>
 
-          <!-- Right Column: Code Card & Architecture -->
-          <div class="about-features">
-            <!-- Code Card -->
-            <div class="card code-card">
-              <pre><code>const developer = {
+          <div class="about-grid">
+            <!-- Left Column: Text Content -->
+            <div class="about-content">
+              <p data-i18n="aboutDesc1">
+                I'm a highly motivated software engineering student with a
+                strong foundation in backend development and system
+                architecture. My approach to problem-solving emphasizes
+                technical rigor and maintainable code. I thrive in environments
+                where data modeling, performance optimization, and architectural
+                clarity are valued.
+              </p>
+              <p data-i18n="aboutDesc2">
+                Currently pursuing my B.Sc. in Software Engineering, I approach
+                problem-solving with a technical rigor that ensures scalable and
+                maintainable code. I thrive in environments where data modeling,
+                performance optimization, and architectural clarity are valued.
+              </p>
+              <p>
+                I'm actively seeking backend or full-stack internship
+                opportunities where I can contribute to complex engineering
+                challenges while continuously expanding my expertise in
+                cloud-native technologies and backend ecosystems.
+              </p>
+            </div>
+
+            <!-- Right Column: Code Card & Architecture -->
+            <div class="about-features">
+              <!-- Code Card -->
+              <div class="card code-card">
+                <pre><code>const developer = {
   name: 'Omar Eldeeb',
   role: 'Backend Engineer',
   interests: [
@@ -145,294 +227,384 @@
   ],
   status: 'Available for hire'
 };</code></pre>
-            </div>
+              </div>
 
-            <!-- Architecture Flow Card -->
-            <div class="card arch-card">
-              <p class="arch-title">Architecture Flow</p>
-              <p class="arch-flow">Client → API Gateway → Service → Database</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Engineering Focus Section -->
-    <section id="focus" class="focus section">
-      <div class="container">
-        <div class="section-header">
-          <span>Focus Areas</span>
-          <h2 data-i18n="focusTitle">Engineering Focus</h2>
-        </div>
-
-        <div class="focus-grid">
-          <!-- Card 1 -->
-          <div class="card focus-card">
-            <div class="card-number">01</div>
-            <h3 class="card-title" data-i18n="focus01Title">Secure Backend Systems</h3>
-            <p class="card-description" data-i18n="focus01Desc">JWT auth, RBAC, refresh tokens, validation, rate limiting, secure API design</p>
-            <div class="card-tags">
-              <span class="tag">Authentication</span>
-              <span class="tag">Security</span>
-              <span class="tag">JWT</span>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="card focus-card">
-            <div class="card-number">02</div>
-            <h3 class="card-title" data-i18n="focus02Title">Database-Driven Applications</h3>
-            <p class="card-description" data-i18n="focus02Desc">PostgreSQL, MongoDB, Redis, JSONB, schema design, pagination, optimized queries</p>
-            <div class="card-tags">
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Redis</span>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="card focus-card">
-            <div class="card-number">03</div>
-            <h3 class="card-title" data-i18n="focus03Title">AI-Integrated Products</h3>
-            <p class="card-description" data-i18n="focus03Desc">LLM APIs, LangChain, Claude API, AI chat, multimodal pipelines, automation workflows</p>
-            <div class="card-tags">
-              <span class="tag">LLM</span>
-              <span class="tag">LangChain</span>
-              <span class="tag">Claude API</span>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="card focus-card">
-            <div class="card-number">04</div>
-            <h3 class="card-title" data-i18n="focus04Title">Production-Ready Development</h3>
-            <p class="card-description" data-i18n="focus04Desc">Docker, Docker Compose, testing, CI/CD, modular architecture, maintainable code</p>
-            <div class="card-tags">
-              <span class="tag">Docker</span>
-              <span class="tag">CI/CD</span>
-              <span class="tag">Testing</span>
+              <!-- Architecture Flow Card -->
+              <div class="card arch-card">
+                <p class="arch-title">Architecture Flow</p>
+                <p class="arch-flow">
+                  Client → API Gateway → Service → Database
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-      <div class="container">
-        <div class="section-header">
-          <span>Technical Expertise</span>
-          <h2 data-i18n="skillsTitle">Skills & Technologies</h2>
-        </div>
+      <!-- Engineering Focus Section -->
+      <section id="focus" class="focus section">
+        <div class="container">
+          <div class="section-header">
+            <span>Focus Areas</span>
+            <h2 data-i18n="focusTitle">Engineering Focus</h2>
+          </div>
 
-        <div class="skills-grid">
-          <!-- Backend -->
-          <div class="card skills-card">
-            <h3 class="skills-title" data-i18n="skillsBackend">Backend</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">Express.js</span>
-              <span class="skill-tag">REST APIs</span>
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Python</span>
+          <div class="focus-grid">
+            <!-- Card 1 -->
+            <div class="card focus-card">
+              <div class="card-number">01</div>
+              <h3 class="card-title" data-i18n="focus01Title">
+                Secure Backend Systems
+              </h3>
+              <p class="card-description" data-i18n="focus01Desc">
+                JWT auth, RBAC, refresh tokens, validation, rate limiting,
+                secure API design
+              </p>
+              <div class="card-tags">
+                <span class="tag">Authentication</span>
+                <span class="tag">Security</span>
+                <span class="tag">JWT</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Databases & Caching -->
-          <div class="card skills-card">
-            <h3 class="skills-title" data-i18n="skillsDatabases">Databases & Caching</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">Redis</span>
-              <span class="skill-tag">JSONB</span>
-              <span class="skill-tag">Pagination</span>
+            <!-- Card 2 -->
+            <div class="card focus-card">
+              <div class="card-number">02</div>
+              <h3 class="card-title" data-i18n="focus02Title">
+                Database-Driven Applications
+              </h3>
+              <p class="card-description" data-i18n="focus02Desc">
+                PostgreSQL, MongoDB, Redis, JSONB, schema design, pagination,
+                optimized queries
+              </p>
+              <div class="card-tags">
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Redis</span>
+              </div>
             </div>
-          </div>
 
-          <!-- AI / LLM -->
-          <div class="card skills-card">
-            <h3 class="skills-title" data-i18n="skillsAI">AI / LLM</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">LangChain</span>
-              <span class="skill-tag">Claude API</span>
-              <span class="skill-tag">AI Workflows</span>
-              <span class="skill-tag">LLM Integration</span>
+            <!-- Card 3 -->
+            <div class="card focus-card">
+              <div class="card-number">03</div>
+              <h3 class="card-title" data-i18n="focus03Title">
+                AI-Integrated Products
+              </h3>
+              <p class="card-description" data-i18n="focus03Desc">
+                LLM APIs, LangChain, Claude API, AI chat, multimodal pipelines,
+                automation workflows
+              </p>
+              <div class="card-tags">
+                <span class="tag">LLM</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">Claude API</span>
+              </div>
             </div>
-          </div>
 
-          <!-- DevOps -->
-          <div class="card skills-card">
-            <h3 class="skills-title" data-i18n="skillsDevOps">DevOps</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Docker Compose</span>
-              <span class="skill-tag">GitHub Actions</span>
-              <span class="skill-tag">CI/CD</span>
+            <!-- Card 4 -->
+            <div class="card focus-card">
+              <div class="card-number">04</div>
+              <h3 class="card-title" data-i18n="focus04Title">
+                Production-Ready Development
+              </h3>
+              <p class="card-description" data-i18n="focus04Desc">
+                Docker, Docker Compose, testing, CI/CD, modular architecture,
+                maintainable code
+              </p>
+              <div class="card-tags">
+                <span class="tag">Docker</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Testing</span>
+              </div>
             </div>
-          </div>
-
-          <!-- Testing -->
-          <div class="card skills-card">
-            <h3 class="skills-title" data-i18n="skillsTesting">Testing</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">Jest</span>
-              <span class="skill-tag">Supertest</span>
-              <span class="skill-tag">TDD</span>
-              <span class="skill-tag">Unit Testing</span>
-            </div>
-          </div>
-
-          <!-- Frontend -->
-          <div class="card skills-card">
-            <h3 class="skills-title" data-i18n="skillsFrontend">Frontend</h3>
-            <div class="skills-tags">
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">CSS</span>
-              <span class="skill-tag">Responsive Design</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects" class="projects section">
-      <div class="container">
-        <div class="section-header">
-          <span>Portfolio</span>
-          <h2 data-i18n="projectsTitle">Featured Projects</h2>
-        </div>
-
-        <!-- Project 1: Heritage Hub -->
-        <article class="project-card">
-          <div class="project-header">
-            <h3 class="project-title" data-i18n="projectHeritageHub">Heritage Hub</h3>
-            <div class="project-links">
-              <a href="#" class="project-link" title="View code"><i class="fa-solid fa-code"></i></a>
-              <a href="#" class="project-link" title="View demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-
-          <p class="project-summary" data-i18n="projectHeritageSummary">
-            A comprehensive cultural tourism platform designed to connect users with heritage sites, featuring deep data modeling and secure user authentication flows.
-          </p>
-
-          <div class="project-proof">
-            <strong>Engineering Proof:</strong>
-            <p>40+ APIs | JWT Rotation | PostgreSQL JSONB | AI Chatbot</p>
-          </div>
-
-          <div class="project-details">
-            <ul class="project-bullets">
-              <li>Built 40+ REST API endpoints across 6 core modules.</li>
-              <li>Implemented JWT auth with rotating refresh tokens and reuse detection.</li>
-              <li>Designed PostgreSQL JSONB schema for bilingual Arabic/English content.</li>
-              <li>Added cursor-based pagination for scalable list endpoints.</li>
-              <li>Integrated a FastAPI-powered AI chatbot service.</li>
-            </ul>
-          </div>
-
-          <div class="tech-stack">
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">Express</span>
-            <span class="tech-badge">PostgreSQL</span>
-            <span class="tech-badge">JWT Auth</span>
-          </div>
-        </article>
-
-        <!-- Project 2: MediLink -->
-        <article class="project-card">
-          <div class="project-header">
-            <h3 class="project-title" data-i18n="projectMediLink">MediLink</h3>
-            <div class="project-links">
-              <a href="#" class="project-link" title="View code"><i class="fa-solid fa-code"></i></a>
-              <a href="#" class="project-link" title="View demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-
-          <p class="project-summary" data-i18n="projectMediLinkSummary">
-            A full-stack healthcare platform facilitating secure communication and data management between patients and healthcare providers.
-          </p>
-
-          <div class="project-proof">
-            <strong>Engineering Proof:</strong>
-            <p>Secure APIs | LangChain Pipeline | X-ray Analysis | Docker Compose</p>
-          </div>
-
-          <div class="project-details">
-            <ul class="project-bullets">
-              <li>Built secure REST APIs for auth, hospital directory, pharmacy directory, AI chat, and X-ray analysis.</li>
-              <li>Engineered a LangChain-powered multimodal AI pipeline.</li>
-              <li>Connected a computer vision model with Claude API through an abstracted service layer.</li>
-              <li>Containerized the backend using Docker Compose for consistent deployment.</li>
-            </ul>
-          </div>
-
-          <div class="tech-stack">
-            <span class="tech-badge">TypeScript</span>
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">Docker</span>
-          </div>
-        </article>
-
-        <!-- Project 3: Complaint Management System -->
-        <article class="project-card">
-          <div class="project-header">
-            <h3 class="project-title" data-i18n="projectComplaint">Complaint Management System</h3>
-            <div class="project-links">
-              <a href="#" class="project-link" title="View code"><i class="fa-solid fa-code"></i></a>
-              <a href="#" class="project-link" title="View demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-
-          <p class="project-summary" data-i18n="projectComplaintSummary">
-            A MERN stack application designed to streamline internal issue reporting and resolution workflows through automated ticketing.
-          </p>
-
-          <div class="project-proof">
-            <strong>Engineering Proof:</strong>
-            <p>RBAC | Redis Rate Limiting | Jest/Supertest | Email Notifications</p>
-          </div>
-
-          <div class="project-details">
-            <ul class="project-bullets">
-              <li>Implemented JWT authentication with HttpOnly cookies and role-based access control.</li>
-              <li>Built complete complaint CRUD with categorized statuses and admin dashboard workflows.</li>
-              <li>Used Redis for session caching and rate-limit tracking.</li>
-              <li>Applied TDD with Jest and Supertest for API coverage.</li>
-              <li>Integrated Nodemailer for email notifications.</li>
-            </ul>
-          </div>
-
-          <div class="tech-stack">
-            <span class="tech-badge">MERN</span>
-            <span class="tech-badge">Redis</span>
-            <span class="tech-badge">Jest</span>
-            <span class="tech-badge">Nodemailer</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="cta section">
-      <div class="container">
-        <div class="cta-content">
-          <h2 data-i18n="ctaHeading">Interested in working together?</h2>
-          <p data-i18n="ctaDesc">I am open to junior backend, full-stack, and internship opportunities.</p>
-
-          <div class="cta-actions">
-            <a href="mailto:anaesthesiayassermadi717@gmail.com" class="btn btn-primary" data-i18n="btnEmailMe">Email Me</a>
-            <a href="https://www.linkedin.com/in/omar-yasser-4098282a3" class="btn btn-outline">LinkedIn</a>
-            <a href="https://github.com/omaryasser-github" class="btn btn-outline">GitHub</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <!-- Skills Section -->
+      <section id="skills" class="skills section">
+        <div class="container">
+          <div class="section-header">
+            <span>Technical Expertise</span>
+            <h2 data-i18n="skillsTitle">Skills & Technologies</h2>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Backend -->
+            <div class="card skills-card">
+              <h3 class="skills-title" data-i18n="skillsBackend">Backend</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Python</span>
+              </div>
+            </div>
+
+            <!-- Databases & Caching -->
+            <div class="card skills-card">
+              <h3 class="skills-title" data-i18n="skillsDatabases">
+                Databases & Caching
+              </h3>
+              <div class="skills-tags">
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">JSONB</span>
+                <span class="skill-tag">Pagination</span>
+              </div>
+            </div>
+
+            <!-- AI / LLM -->
+            <div class="card skills-card">
+              <h3 class="skills-title" data-i18n="skillsAI">AI / LLM</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">LangChain</span>
+                <span class="skill-tag">Claude API</span>
+                <span class="skill-tag">AI Workflows</span>
+                <span class="skill-tag">LLM Integration</span>
+              </div>
+            </div>
+
+            <!-- DevOps -->
+            <div class="card skills-card">
+              <h3 class="skills-title" data-i18n="skillsDevOps">DevOps</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Docker Compose</span>
+                <span class="skill-tag">GitHub Actions</span>
+                <span class="skill-tag">CI/CD</span>
+              </div>
+            </div>
+
+            <!-- Testing -->
+            <div class="card skills-card">
+              <h3 class="skills-title" data-i18n="skillsTesting">Testing</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">Jest</span>
+                <span class="skill-tag">Supertest</span>
+                <span class="skill-tag">TDD</span>
+                <span class="skill-tag">Unit Testing</span>
+              </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="card skills-card">
+              <h3 class="skills-title" data-i18n="skillsFrontend">Frontend</h3>
+              <div class="skills-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section id="projects" class="projects section">
+        <div class="container">
+          <div class="section-header">
+            <span>Portfolio</span>
+            <h2 data-i18n="projectsTitle">Featured Projects</h2>
+          </div>
+
+          <!-- Project 1: Heritage Hub -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-title" data-i18n="projectHeritageHub">
+                Heritage Hub
+              </h3>
+              <div class="project-links">
+                <a href="#" class="project-link" title="View code"
+                  ><i class="fa-solid fa-code"></i
+                ></a>
+                <a href="#" class="project-link" title="View demo"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+
+            <p class="project-summary" data-i18n="projectHeritageSummary">
+              A comprehensive cultural tourism platform designed to connect
+              users with heritage sites, featuring deep data modeling and secure
+              user authentication flows.
+            </p>
+
+            <div class="project-proof">
+              <strong>Engineering Proof:</strong>
+              <p>40+ APIs | JWT Rotation | PostgreSQL JSONB | AI Chatbot</p>
+            </div>
+
+            <div class="project-details">
+              <ul class="project-bullets">
+                <li>Built 40+ REST API endpoints across 6 core modules.</li>
+                <li>
+                  Implemented JWT auth with rotating refresh tokens and reuse
+                  detection.
+                </li>
+                <li>
+                  Designed PostgreSQL JSONB schema for bilingual Arabic/English
+                  content.
+                </li>
+                <li>
+                  Added cursor-based pagination for scalable list endpoints.
+                </li>
+                <li>Integrated a FastAPI-powered AI chatbot service.</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">JWT Auth</span>
+            </div>
+          </article>
+
+          <!-- Project 2: MediLink -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-title" data-i18n="projectMediLink">
+                MediLink
+              </h3>
+              <div class="project-links">
+                <a href="#" class="project-link" title="View code"
+                  ><i class="fa-solid fa-code"></i
+                ></a>
+                <a href="#" class="project-link" title="View demo"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+
+            <p class="project-summary" data-i18n="projectMediLinkSummary">
+              A full-stack healthcare platform facilitating secure communication
+              and data management between patients and healthcare providers.
+            </p>
+
+            <div class="project-proof">
+              <strong>Engineering Proof:</strong>
+              <p>
+                Secure APIs | LangChain Pipeline | X-ray Analysis | Docker
+                Compose
+              </p>
+            </div>
+
+            <div class="project-details">
+              <ul class="project-bullets">
+                <li>
+                  Built secure REST APIs for auth, hospital directory, pharmacy
+                  directory, AI chat, and X-ray analysis.
+                </li>
+                <li>Engineered a LangChain-powered multimodal AI pipeline.</li>
+                <li>
+                  Connected a computer vision model with Claude API through an
+                  abstracted service layer.
+                </li>
+                <li>
+                  Containerized the backend using Docker Compose for consistent
+                  deployment.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">Docker</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Complaint Management System -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-title" data-i18n="projectComplaint">
+                Complaint Management System
+              </h3>
+              <div class="project-links">
+                <a href="#" class="project-link" title="View code"
+                  ><i class="fa-solid fa-code"></i
+                ></a>
+                <a href="#" class="project-link" title="View demo"
+                  ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                ></a>
+              </div>
+            </div>
+
+            <p class="project-summary" data-i18n="projectComplaintSummary">
+              A MERN stack application designed to streamline internal issue
+              reporting and resolution workflows through automated ticketing.
+            </p>
+
+            <div class="project-proof">
+              <strong>Engineering Proof:</strong>
+              <p>
+                RBAC | Redis Rate Limiting | Jest/Supertest | Email
+                Notifications
+              </p>
+            </div>
+
+            <div class="project-details">
+              <ul class="project-bullets">
+                <li>
+                  Implemented JWT authentication with HttpOnly cookies and
+                  role-based access control.
+                </li>
+                <li>
+                  Built complete complaint CRUD with categorized statuses and
+                  admin dashboard workflows.
+                </li>
+                <li>Used Redis for session caching and rate-limit tracking.</li>
+                <li>Applied TDD with Jest and Supertest for API coverage.</li>
+                <li>Integrated Nodemailer for email notifications.</li>
+              </ul>
+            </div>
+
+            <div class="tech-stack">
+              <span class="tech-badge">MERN</span>
+              <span class="tech-badge">Redis</span>
+              <span class="tech-badge">Jest</span>
+              <span class="tech-badge">Nodemailer</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="contact" class="cta section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 data-i18n="ctaHeading">Interested in working together?</h2>
+            <p data-i18n="ctaDesc">
+              I am open to junior backend, full-stack, and internship
+              opportunities.
+            </p>
+
+            <div class="cta-actions">
+              <a
+                href="mailto:anaesthesiayassermadi717@gmail.com"
+                class="btn btn-primary"
+                data-i18n="btnEmailMe"
+                >Email Me</a
+              >
+              <a
+                href="https://www.linkedin.com/in/omar-yasser-4098282a3"
+                class="btn btn-outline"
+                >LinkedIn</a
+              >
+              <a
+                href="https://github.com/omaryasser-github"
+                class="btn btn-outline"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -445,14 +617,19 @@
 
         <div class="footer-section">
           <p>
-            <a href="mailto:anaesthesiayassermadi717@gmail.com">Email</a> | 
-            <a href="https://www.linkedin.com/in/omar-yasser-4098282a3">LinkedIn</a> | 
+            <a href="mailto:anaesthesiayassermadi717@gmail.com">Email</a> |
+            <a href="https://www.linkedin.com/in/omar-yasser-4098282a3"
+              >LinkedIn</a
+            >
+            |
             <a href="https://github.com/omaryasser-github">GitHub</a>
           </p>
         </div>
 
         <div class="footer-section">
-          <p data-i18n="footerCopy">&copy; <span id="year">2026</span> Omar Eldeeb. Backend Engineer.</p>
+          <p data-i18n="footerCopy">
+            &copy; <span id="year">2026</span> Omar Eldeeb. Backend Engineer.
+          </p>
         </div>
       </div>
     </footer>
